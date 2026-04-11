@@ -336,7 +336,7 @@
       grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
       gap: 24px;
       margin-bottom: 42px;
-      align-items: end;
+      align-items: start;
     }
 
     .section-kicker {
@@ -361,6 +361,16 @@
     .about-grid {
       grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
       align-items: start;
+    }
+
+    /* about セクションの heading は単一列で全幅表示 */
+    #about .section-heading > div {
+      grid-column: 1 / -1;
+    }
+
+    .about-lead {
+      margin: 0;
+      color: var(--text-mid);
     }
 
     .about-copy {
@@ -402,7 +412,9 @@
 
     .portrait-stack .image-card:first-child img {
       aspect-ratio: 4 / 5;
+      max-height: 420px;
       object-fit: cover;
+      object-position: top center;
     }
 
     .image-card figcaption {
@@ -585,7 +597,7 @@
 
     .company-grid {
       grid-template-columns: minmax(0, 1fr) 360px;
-      align-items: start;
+      align-items: stretch;
     }
 
     .company-card {
@@ -973,10 +985,10 @@
             <div class="section-kicker">About 01</div>
             <h2>数字の先にある意思決定まで、静かに伴走する事務所です。</h2>
           </div>
-          <p>月次の整理に終始するのではなく、資金繰り、投資判断、人員計画まで見通した助言を重ねること。それが Seion Ledger税理士事務所の基本姿勢です。</p>
         </div>
         <div class="about-grid">
           <div class="about-copy">
+            <p class="about-lead">月次の整理に終始するのではなく、資金繰り、投資判断、人員計画まで見通した助言を重ねること。それが Seion Ledger税理士事務所の基本姿勢です。</p>
             <div class="statement">
               <p>税務は、経営における守りであると同時に、次の一手を照らすための基盤でもあります。記帳の精度を整え、会計の見え方を揃え、経営者が安心して判断できる状態をつくる。その積み重ねを、私たちは一件ずつ丁寧に担います。</p>
             </div>
@@ -1219,11 +1231,11 @@
           </div>
           <div class="company-gallery">
             <figure class="image-card">
-              <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&h=400&fit=crop" alt="事務所の受付カウンター" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&h=400&fit=crop" alt="事務所の受付カウンター" width="600" height="400" loading="lazy">
               <figcaption>来客導線を意識した受付スペース。</figcaption>
             </figure>
             <figure class="image-card">
-              <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&h=400&fit=crop" alt="会議テーブルのある相談室" loading="lazy">
+              <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&h=400&fit=crop" alt="会議テーブルのある相談室" width="600" height="400" loading="lazy">
               <figcaption>資料を広げながら相談できる面談室。</figcaption>
             </figure>
           </div>
